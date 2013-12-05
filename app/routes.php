@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/', 'NewsController@index');
+Route::resource('news', 'NewsController');
+
+Route::resource('categories', 'CategoriesController');
