@@ -70,3 +70,4 @@ echo "CREATE DATABASE IF NOT EXISTS news_feed" | mysql -uroot -proot
 echo "GRANT ALL PRIVILEGES ON news_feed.* TO 'newsuser'@'localhost' IDENTIFIED BY 'newsuserpassword'" | mysql -uroot -proot
 # Set up the database
 php artisan migrate
+php artisan db::seed
