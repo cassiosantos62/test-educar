@@ -24,8 +24,10 @@
 				<a class="brand" href="#">Educar.com.br</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
+						<li {{Request::is('/') ? 'class="active"' : ''}}><a href="/">Home</a></li>
 						<li {{Request::is('news') ? 'class="active"' : ''}}><a href="/news">Notícias</a></li>
-						<li {{Request::is('categories') ? 'class="active"' : ''}}><a href="/categories">Categorias</a></li>						
+						<li {{Request::is('categories') ? 'class="active"' : ''}}><a href="/categories">Categorias</a></li>
+						<li><a href="/rss">Rss</a></li>						
 					</ul>
 				</div><!--/.nav-collapse -->
 			</div>

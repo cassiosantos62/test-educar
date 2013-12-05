@@ -11,7 +11,21 @@
 |
 */
 
-Route::get('/', 'NewsController@index');
-Route::resource('news', 'NewsController');
+/*Home*/
+Route::get('/', 'HomeController@index');
 
+/*CRUD*/
+Route::resource('news', 'NewsController');
 Route::resource('categories', 'CategoriesController');
+
+/*RSS*/
+Route::get('rss', function(){
+
+	$category = Request::input('category');	
+
+	if($category)
+		return News::where('category_id', '=', $category)->get();
+
+	return News::all();
+	
+});
