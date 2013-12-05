@@ -60,3 +60,13 @@ sudo mv composer.phar /usr/local/bin/composer
 # Laravel stuff here, if you want
 
 echo "--- All set to go! Would you like to play a game? ---"
+# -------------
+# Load Composer packages
+cd /var/www
+chmod 
+composer install --dev
+# Set up the database
+echo "CREATE DATABASE IF NOT EXISTS news_feed" | mysql -uroot -proot
+echo "GRANT ALL PRIVILEGES ON news_feed.* TO 'newsuser'@'localhost' IDENTIFIED BY 'newsuserpassword'" | mysql -uroot -proot
+# Set up the database
+php artisan migrate

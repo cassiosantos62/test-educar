@@ -17,3 +17,6 @@ Thumbs.db
 
 # Packages
 _ide_helpers.php
+
+# Vagrant
+.vagrant
