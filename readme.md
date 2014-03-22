@@ -1,6 +1,6 @@
 ## Feed de Notícias + CRUD
 
-## Passos para rodar o projeto
+## Passos para executar o projeto
 
 1. Instale o Vagrant e o VirtualBox.
 2. Clone este repositório.
